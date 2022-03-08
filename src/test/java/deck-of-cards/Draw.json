@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "cards": [
+    {
+      "image": "#string",
+      "value": "#string",
+      "suit": "#string",
+      "code": "#string",
+      "images": {
+        "svg": "#string",
+        "png": "#string"
+      }
+    }
+  ],
+  "deck_id": "#string",
+  "remaining": 51
+}
