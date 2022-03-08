@@ -1,11 +1,12 @@
-Feature: Shuffle the cards
+Feature: Shuffle
 
   Background:
     * url deckOfCardsUrl
     * path '/api/deck/new/shuffle/'
+    * def expected = read('Shuffle.json')
 
   Scenario: Shuffle one card deck
-    * param deck_count = 1
-    * method GET
-    * status 200
-    * match response == {success: true, deck_id: #string, remaining: #number, shuffled: true}
+    Given param deck_count = 1
+    When method GET
+    Then status 200
+    Then match response == expected
