@@ -9,4 +9,4 @@ Feature: Shuffle
     Given param deck_count = 1
     When method GET
     Then status 200
-    Then match response == expected
+    And match response == expected

@@ -11,5 +11,5 @@ Feature: Draw
     Given param count = 1
     When method GET
     Then status 200
-    Then match response == expected
-    Then match response.deck_id == deck_id
+    And match response == expected
+    And match response.deck_id == deck_id
