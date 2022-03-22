@@ -2,10 +2,10 @@ Feature: Reshuffle
 
   Background:
     * url deckOfCardsUrl
-    * def shuffle = call read('Shuffle.feature')
-    * def deck_id = shuffle.response.deck_id
+    * def new_deck = call read('New.feature')
+    * def deck_id = new_deck.response.deck_id
     * path '/api/deck/' + deck_id + '/shuffle/'
-    * def expected = read('Shuffle.json')
+    * def expected = read('Reshuffle.json')
 
   Scenario: Shuffle existing card deck
     Given param remaining = true

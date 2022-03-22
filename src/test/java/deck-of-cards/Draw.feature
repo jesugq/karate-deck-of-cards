@@ -2,8 +2,8 @@ Feature: Draw
 
   Background:
     * url deckOfCardsUrl
-    * def shuffle = call read('Shuffle.feature')
-    * def deck_id = shuffle.response.deck_id
+    * def new_deck = call read('New.feature')
+    * def deck_id = new_deck.response.deck_id
     * path '/api/deck/' + deck_id + '/draw/'
     * def expected = read('Draw.json')
 
